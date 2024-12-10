@@ -1,0 +1,33 @@
+# Jobs
+# VP of Global Communications
+- company: Optum
+  position: Senior Principal Engineer
+  duration: Jun, 2020 &mdash; Present
+  summary: <ul class="resume-item-list"><li>Lead architect for Consumer Acquisition Services (AWS)</li><li>Architect on JMH MMP work for EIP (Azure)</li><li>Lead Infrastructure-as-Code and CI/CD effort for CAS in AWS</li><li>Helped prioritize roadmap and lead priority work streams to on time delivery</li><li>Python, Scala, Marketing Cloud Integrations, Terraform</li></ul>
+
+# Director of Digital Stratgy
+- company: Optum
+  position: Director of Engineering
+  duration: Nov, 2017 &mdash; Jun, 2020
+  summary: <ul class="resume-item-list"><li>Team Lead for HealthPost product and manager for several team members.</li><li>Microservices architecture consisting of a set of Ruby on Rails applications</li><li>Bi-directional EMR Integrations for scheduling with most major EMR vendors.</li><li>Lead the effort to move HealthPost into AWS and automate infrastructure with Terraform</li></ul>
+
+# Communications Coordinator
+- company: The Advisory Board Company
+  position: Director of Engineering
+  duration: May, 2014 &mdash; Nov, 2017
+  summary: <ul class="resume-item-list"><li>Team Lead for HealthPost product and manager for several team members.</li><li>Regularly attended on-site client meetings on behalf of the product.</li><li>Led the initiative to build an API Developer Platform for HealthPost.</li><li>Helped deliver an ECW Integration that involved a deployable agent that would read and write directly to ECW’s database</li></ul>
+
+- company: HealthPost
+  position: Co-founder / CTO
+  duration: Jan, 2011 &mdash; May, 2014
+  summary: <ul class="resume-item-list"><li>Co-Founder and technical lead for HealthPost</li><li>Built, designed and deployed the launch versions of the product by myself.</li><li>Scaled the engineering team and client base to 10+, before being acquired by The Advisory Board Company.</li></ul>
+
+- company: BDP International
+  position: Software Developer
+  duration: 2007 &mdash; May, 2011
+  summary: Java developer working EDI Integrations between Clients and our company's system.
+
+- company: Lonestar Turnkey Systems
+  position: Software Developer
+  duration: 2003 &mdash; May, 2007
+  summary: Helped develop and support a Windows GUI-based product

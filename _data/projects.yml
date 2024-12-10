@@ -1,0 +1,9 @@
+# Projects
+# uncomment the urls if you wish to display them, and add your own URL
+
+# jazznotes.io
+- project: AWS WAFv2 Terraform Module
+  role: Developer
+  duration: 2024 &mdash; Present
+  url: "https://github.com/dave-elkins/terraform-aws-wafv2"
+  description: A terraform module for AWS WAFv2

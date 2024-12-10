@@ -1,0 +1,63 @@
+# Site settings
+title: "Dave Elkins"
+description: "a site about me"
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Resume settings
+resume_avatar:                  "true"
+resume_name:                    "Dave Elkins"
+resume_title:                   "Senior Principal Engineer"
+
+# used for the contact button in _layouts/resume.html
+resume_contact_email:           "delkins01@gmail.com"
+
+# the next two items are used for schema itemprops in _layouts/resume.html
+resume_contact_telephone:       ""
+resume_contact_address:         "Colorado"
+
+resume_header_contact_info:     "Colorado • https://linkedin.com/in/daveelkins/"
+display_header_contact_info:    "false"
+
+resume_header_intro: "<p>I am a software developer working in the industry for 20+ years and 13 years in healthcare software.  I am passionate about end user experience and the developer experience as well. I am always looking to expand my knowledge and improve my skills.</p>"
+
+# use "yes" to display the email contact button,
+# "no" to display an "I'm not looking for work" message,
+# or remove the resume_looking_for_work option entirely
+# to leave blank
+resume_looking_for_work:        "yes"
+
+# Decide which sections to use
+# comment out to hide
+resume_section_experience:      true
+resume_section_education:       true
+resume_section_projects:        true
+resume_section_skills:          true
+# resume_section_recognition:     true
+resume_section_links:           true
+# resume_section_associations:    true
+# resume_section_interests:       true
+
+# Resume social links
+# uncomment the options you wish to display, and add your own URL
+resume_social_links:
+  resume_github_url:            "https://github.com/dave-elkins"
+  # resume_twitter_url:           ""
+  # resume_dribbble_url:          ""
+  # resume_facebook_url:          "insert Facebook URL here"
+  resume_linkedin_url:          "https://linkedin.com/in/daveelkins/"
+  # resume_instagram_url:         "insert your Instagram URL here"
+  resume_website_url:           "http://dave-elkins.github.com"
+  #resume_medium_url:            ""
+resume_print_social_links:      true
+
+# Design settings
+resume_theme:                   default
+
+# Note: when editing locally, remember to restart
+# your Jekyll server when you edit this file. Changes
+# to _config.yml are only recognized when the server starts
