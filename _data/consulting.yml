@@ -1,0 +1,13 @@
+- summary: |
+      I work with health-tech companies that need senior-level technical expertise without the overhead of a full-time hire.
+      I've spent 15+ years building and scaling healthcare software — from co-founding and selling a startup to architecting consumer health platforms at Optum scale. I bring that depth to focused engagements where it matters most.
+  services:
+      - "HIPAA-compliant AWS and Azure cloud architecture"
+      - "EMR / EHR integration design and implementation (eClinicalWorks, Epic, and others)"
+      - "Infrastructure as Code (Terraform), CI/CD pipelines, and DevOps modernization"
+      - "API platform design and microservices architecture"
+      - "Technical due diligence for investors or acquirers"
+      - "Fractional CTO support for early-stage health-tech startups"
+  ideal_clients: |
+      Series A/B health-tech companies, digital health startups, and healthcare organizations that are scaling their engineering capabilities and need a senior technical partner who understands both the technology and the regulatory landscape.
+  contact: "delkins01@gmail.com"

@@ -40,13 +40,40 @@
         </div>
 
         {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email">Contact me</a>
+        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email">Work with me</a>
         {% elsif site.resume_looking_for_work == 'no' %}
         <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
         {% else %}
         {% endif %}
 
       </header>
+
+      {% if site.resume_section_consulting %}
+      <!-- begin Consulting -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Consulting</h2>
+        </header>
+
+        {% for item in site.data.consulting %}
+        <div class="resume-item">
+          <p class="resume-item-copy">{{ item.summary }}</p>
+          <h4 class="resume-item-details">I can help with:</h4>
+          <ul class="resume-item-list">
+            {% for service in item.services %}
+            <li>{{ service }}</li>
+            {% endfor %}
+          </ul>
+          <h4 class="resume-item-details">Who I work with best:</h4>
+          <p class="resume-item-copy">{{ item.ideal_clients }}</p>
+          <p class="resume-item-copy"><a href="mailto:{{ item.contact }}">📩 Reach out at {{ item.contact }} to start a conversation.</a></p>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end Consulting -->
+      {% endif %}
 
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
