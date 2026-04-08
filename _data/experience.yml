@@ -1,26 +1,66 @@
 # Jobs
+
+- company: HarmonyCares
+  position: Senior Principal Engineer
+  duration: Apr, 2025 &mdash; Present
+  summary: |
+      HarmonyCares is a value-based care organization focused on delivering in-home primary care to complex, high-need patients.
+
+      - Leading architecture and engineering for our integration platform to support our clinical operations between Salesforce, Athena, CareLink and Verato.
+      - Implemented robust patient identity mastering across Salesforce, Athena and Carelink using Verato as our EMPI solution along with a custom FastAPI app and Azure functions to keep all systems in sync for patient identification.
+      - Designed and built a robust monitoring solution to identify issues in our data syncing process so that they could be identified, triage and resolved by our support team with rare escalations to the dev team for help.
+      - Driving adoption of cloud-native patterns and infrastructure-as-code practices for the engineering team
+      - Partnering with product and clinical stakeholders to translate healthcare workflows into scalable, reliable software systems
+
+      *Key technologies: Azure, Python, Databricks, Terraform*
+
 # VP of Global Communications
 - company: Optum
   position: Senior Principal Engineer
-  duration: Jun, 2020 &mdash; Present
-  summary: <ul class="resume-item-list"><li>Lead architect for Consumer Acquisition Services (AWS)</li><li>Architect on JMH MMP work for EIP (Azure)</li><li>Lead Infrastructure-as-Code and CI/CD effort for CAS in AWS</li><li>Helped prioritize roadmap and lead priority work streams to on time delivery</li><li>Python, Scala, Marketing Cloud Integrations, Terraform</li></ul>
+  duration: Jun, 2020 &mdash; Apr, 2025
+  summary: |
+      - Lead architect for Consumer Acquisition Services (CAS), a marketing and member acquisition platform on AWS
+      - Designed and led the Infrastructure-as-Code and CI/CD strategy for CAS, replacing manual provisioning with fully automated Terraform pipelines — reducing deployment time by 50% and improving environment consistency across dev, staging, and production
+      - Served as architect on the JMH MMP program within the Enterprise Integration Platform (EIP) on Azure, driving technical strategy for a complex multi-stakeholder integration effort
+      - Partnered with Marketing Cloud teams to deliver data pipeline integrations connecting member acquisition workflows to downstream analytics and campaign systems
+      - Mentored engineers across multiple teams and helped establish architectural standards adopted org-wide
+
+      *Key technologies: Python, Scala, Terraform, AWS, Azure, Marketing Cloud integrations, CI/CD*
 
 # Director of Digital Stratgy
 - company: Optum
   position: Director of Engineering
   duration: Nov, 2017 &mdash; Jun, 2020
-  summary: <ul class="resume-item-list"><li>Team Lead for HealthPost product and manager for several team members.</li><li>Microservices architecture consisting of a set of Ruby on Rails applications</li><li>Bi-directional EMR Integrations for scheduling with most major EMR vendors.</li><li>Lead the effort to move HealthPost into AWS and automate infrastructure with Terraform</li></ul>
+  summary: |
+      - Served as engineering lead and people manager for the HealthPost product following its acquisition, scaling the team and continuing product development post-acquisition
+      - Architected and led the migration of HealthPost's infrastructure from on-premise to AWS, improving reliability, scalability, and deployment velocity
+      - Built and maintained a microservices architecture using Ruby on Rails, with bi-directional EMR integrations covering the majority of major EHR vendors in the U.S. market
+      - Managed a team of 10 engineers, handling hiring, performance reviews, roadmap prioritization, and cross-functional stakeholder alignment
+      - Maintained 24/7 uptime SLAs for a scheduling platform used by hospital systems and healthcare providers nationwide
+
+      *Key technologies: Ruby on Rails, AWS, Terraform, REST APIs, EMR/EHR integrations, CI/CD*
 
 # Communications Coordinator
 - company: The Advisory Board Company
   position: Director of Engineering
   duration: May, 2014 &mdash; Nov, 2017
-  summary: <ul class="resume-item-list"><li>Team Lead for HealthPost product and manager for several team members.</li><li>Regularly attended on-site client meetings on behalf of the product.</li><li>Led the initiative to build an API Developer Platform for HealthPost.</li><li>Helped deliver an ECW Integration that involved a deployable agent that would read and write directly to ECW’s database</li></ul>
+  summary: |
+      - Team Lead for HealthPost product and manager for several team members.
+      - Regularly attended on-site client meetings on behalf of the product.
+      - Led the initiative to build an API Developer Platform for HealthPost.
+      - Helped deliver an ECW Integration that involved a deployable agent that would read and write directly to ECW’s database
+
+      *Key technologies: Ruby on Rails, REST APIs, EMR/EHR integrations, CI/CD*
 
 - company: HealthPost
   position: Co-founder / CTO
   duration: Jan, 2011 &mdash; May, 2014
-  summary: <ul class="resume-item-list"><li>Co-Founder and technical lead for HealthPost</li><li>Built, designed and deployed the launch versions of the product by myself.</li><li>Scaled the engineering team and client base to 10+, before being acquired by The Advisory Board Company.</li></ul>
+  summary: |
+      - Co-Founder and technical lead for HealthPost
+      - Built, designed and deployed the launch versions of the product by myself.
+      - Scaled the engineering team and client base to 10+, before being acquired by The Advisory Board Company.
+
+      *Key technologies: Ruby on Rails, REST APIs, EMR/EHR integrations, CI/CD*
 
 - company: BDP International
   position: Software Developer
