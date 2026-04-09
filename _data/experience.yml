@@ -4,7 +4,7 @@
   position: Senior Principal Engineer
   duration: Apr, 2025 &mdash; Present
   summary: |
-      HarmonyCares is a value-based care organization focused on delivering in-home primary care to complex, high-need patients.
+      HarmonyCares delivers value-based, in-home primary care to high-need patients across the country.
 
       - Leading architecture and engineering for our integration platform to support our clinical operations between Salesforce, Athena, CareLink and Verato.
       - Implemented robust patient identity mastering across Salesforce, Athena and Carelink using Verato as our EMPI solution along with a custom FastAPI app and Azure functions to keep all systems in sync for patient identification.
@@ -12,7 +12,7 @@
       - Driving adoption of cloud-native patterns and infrastructure-as-code practices for the engineering team
       - Partnering with product and clinical stakeholders to translate healthcare workflows into scalable, reliable software systems
 
-      *Key technologies: Azure, Python, Databricks, Terraform*
+      *Azure, Python, Databricks, Terraform, Github Copilot*
 
 # VP of Global Communications
 - company: Optum
@@ -25,47 +25,53 @@
       - Partnered with Marketing Cloud teams to deliver data pipeline integrations connecting member acquisition workflows to downstream analytics and campaign systems
       - Mentored engineers across multiple teams and helped establish architectural standards adopted org-wide
 
-      *Key technologies: Python, Scala, Terraform, AWS, Azure, Marketing Cloud integrations, CI/CD*
+      *Python, Scala, Terraform, AWS, Azure, Marketing Cloud integrations, CI/CD*
 
 # Director of Digital Stratgy
 - company: Optum
   position: Director of Engineering
   duration: Nov, 2017 &mdash; Jun, 2020
   summary: |
-      - Served as engineering lead and people manager for the HealthPost product following its acquisition, scaling the team and continuing product development post-acquisition
-      - Architected and led the migration of HealthPost's infrastructure from on-premise to AWS, improving reliability, scalability, and deployment velocity
-      - Built and maintained a microservices architecture using Ruby on Rails, with bi-directional EMR integrations covering the majority of major EHR vendors in the U.S. market
-      - Managed a team of 10 engineers, handling hiring, performance reviews, roadmap prioritization, and cross-functional stakeholder alignment
+      - Engineering lead and people manager for the HealthPost product following its acquisition by UnitedHealth Group
+      - Led the migration of HealthPost's infrastructure from on-premise to AWS, improving reliability, scalability, and deployment velocity
+      - Maintained a microservices architecture in Ruby on Rails with bi-directional EMR integrations covering most major EHR vendors in the U.S. market
+      - Managed a team of engineers through hiring, performance reviews, roadmap prioritization, and cross-functional stakeholder alignment
       - Maintained 24/7 uptime SLAs for a scheduling platform used by hospital systems and healthcare providers nationwide
 
-      *Key technologies: Ruby on Rails, AWS, Terraform, REST APIs, EMR/EHR integrations, CI/CD*
+      *Ruby on Rails, AWS, Terraform, REST APIs, EMR/EHR integrations, CI/CD*
 
 # Communications Coordinator
 - company: The Advisory Board Company
   position: Director of Engineering
   duration: May, 2014 &mdash; Nov, 2017
   summary: |
-      - Team Lead for HealthPost product and manager for several team members.
-      - Regularly attended on-site client meetings on behalf of the product.
-      - Led the initiative to build an API Developer Platform for HealthPost.
-      - Helped deliver an ECW Integration that involved a deployable agent that would read and write directly to ECW’s database
+      - Led the HealthPost engineering team post-acquisition through rapid scaling and product expansion
+      - Led the initiative to build an API Developer Platform for HealthPost, enabling third-party integrations at scale
+      - Delivered a complex eClinicalWorks (ECW) integration involving a deployable agent that read and wrote directly to ECW's database — a technically demanding, high-value integration for clinical scheduling
+      - Managed client relationships directly, regularly attending on-site meetings on behalf of the product
+      - Led the move to AWS and established Terraform-based infrastructure automation
 
-      *Key technologies: Ruby on Rails, REST APIs, EMR/EHR integrations, CI/CD*
+      *Ruby on Rails, REST APIs, EMR/EHR integrations, CI/CD*
 
 - company: HealthPost
-  position: Co-founder / CTO
+  position: Co-founder &amp; CTO
   duration: Jan, 2011 &mdash; May, 2014
   summary: |
-      - Co-Founder and technical lead for HealthPost
-      - Built, designed and deployed the launch versions of the product by myself.
-      - Scaled the engineering team and client base to 10+, before being acquired by The Advisory Board Company.
+      - Co-founded HealthPost, a white-label consumer healthcare scheduling platform for hospital systems and medical practices
+      - Designed, built, and deployed the initial product entirely as a solo engineer — full stack, infrastructure, and integrations
+      - Built an API platform and EMR integrations for scheduling with major EHR vendors
+      - Scaled the engineering team and client base as the company grew
+      - Successfully exited via acquisition by The Advisory Board Company in 2014
 
-      *Key technologies: Ruby on Rails, REST APIs, EMR/EHR integrations, CI/CD*
+      *Ruby on Rails, REST APIs, EMR/EHR integrations, CI/CD*
 
 - company: BDP International
   position: Software Developer
   duration: 2007 &mdash; May, 2011
-  summary: Java developer working EDI Integrations between Clients and our company's system.
+  summary: |
+      Java developer working on EDI integrations between enterprise clients and BDP's logistics platform across North America, Europe, and Asia. Involved in the full project lifecycle from planning through production support. Also built web-based internal tools and reporting dashboards.
+
+      *Java, XML, SAP IDOC, EDI*
 
 - company: Lonestar Turnkey Systems
   position: Software Developer

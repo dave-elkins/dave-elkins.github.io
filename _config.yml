@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar: "true"
 resume_name: "Dave Elkins"
-resume_title: "Senior Principal Engineer"
+resume_title: "Senior Principal Engineer · Healthcare Software · Cloud Architecture · Available for Consulting"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email: "delkins01@gmail.com"
@@ -23,7 +23,12 @@ resume_contact_address: "Colorado"
 resume_header_contact_info: "Colorado • https://linkedin.com/in/daveelkins/"
 display_header_contact_info: "false"
 
-resume_header_intro: "<p>I'm a software engineer with 20+ years of experience, the last 15 in healthcare. I co-founded HealthPost, built it from scratch, and led a successful acquisition. Today I work as a Senior Principal Engineer at HarmonyCares and consult for health-tech companies that need senior architecture and EMR integration expertise.</p>"
+resume_header_intro: |
+    I'm a software engineer with 20+ years of experience, the last 15 spent exclusively in healthcare. I co-founded HealthPost — a consumer healthcare scheduling platform — built it from scratch as a solo engineer, scaled the team, and led a successful acquisition by The Advisory Board Company in 2014. Since then I've worked at the Director and Principal Engineer level inside Optum/UnitedHealth Group and HarmonyCares, building large-scale cloud platforms, EMR integrations, and data pipelines for some of the largest health systems in the country.
+
+    I'm passionate about both the end-user experience and the developer experience — good software needs to work well for the people using it and the engineers maintaining it.
+
+    📩 [delkins01@gmail.com](mailto:delkins01@gmail.com)
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,

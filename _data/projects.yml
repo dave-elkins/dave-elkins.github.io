@@ -1,9 +1,15 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
+- project: HealthPost (acquired 2014)
+  role: Co-Founder &amp; CTO
+  duration: 2011 &mdash; 2014
+  description: |
+      Consumer healthcare scheduling platform serving hospital systems and medical practices. Built from scratch — full stack Rails application, AWS infrastructure, EMR integrations, and API platform. Scaled to 10+ clients before a successful acquisition by The Advisory Board Company.
+
 - project: AWS WAFv2 Terraform Module
   role: Developer
   duration: 2024 &mdash; Present
   url: "https://github.com/dave-elkins/terraform-aws-wafv2"
-  description: A terraform module for AWS WAFv2
+  description: |
+      A reusable Terraform module for AWS WAF V2, simplifying web application firewall configuration for teams building HIPAA-compliant and security-conscious infrastructure on AWS.
