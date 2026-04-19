@@ -14,7 +14,7 @@ resume_name: "Dave Elkins"
 resume_title: "Senior Principal Engineer · Healthcare Software · Cloud Architecture · Available for Consulting"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email: "delkins01@gmail.com"
+resume_contact_email: "dave@fenohlth.com"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone: ""
@@ -28,7 +28,7 @@ resume_header_intro: |
 
     I'm passionate about both the end-user experience and the developer experience — good software needs to work well for the people using it and the engineers maintaining it.
 
-    📩 [delkins01@gmail.com](mailto:delkins01@gmail.com)
+    📩 [dave@fenohlth.com](mailto:dave@fenohlth.com)
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
