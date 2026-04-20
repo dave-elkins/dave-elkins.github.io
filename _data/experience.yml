@@ -1,5 +1,20 @@
 # Jobs
 
+- company: FenoHLTH
+  position: Founder &amp; Principal Consultant
+  duration: Apr, 2026 &mdash; Present
+  summary: |
+      FenoHLTH is how I bring that depth to organizations that need senior technical expertise without a full-time hire — for a focused project, a fractional CTO role, or anything in between.
+
+      - HIPAA-compliant AWS and Azure cloud architecture
+      - EMR / EHR integration design and implementation (eClinicalWorks, Epic, and others)
+      - Infrastructure as Code (Terraform), CI/CD pipelines, and DevOps modernization
+      - API platform design and microservices architecture
+      - Technical due diligence for investors or acquirers
+      - Fractional CTO support for early-stage health-tech startups
+
+      *AI, AWS, Azure, Healthcare, DevOps*
+
 - company: HarmonyCares
   position: Senior Principal Engineer
   duration: Apr, 2025 &mdash; Present
