@@ -1,82 +1,86 @@
-# Dave Elkins Resume Site
+# dave-elkins.github.io
 
-A Jekyll-based resume website hosted on GitHub Pages at [dave-elkins.github.io](https://dave-elkins.github.io).
+Astro site for Dave Elkins' writing and printable résumé, hosted on GitHub Pages.
 
-## Quick Start
-
-### Making Updates
-
-Edit the YAML files in the `_data/` directory to update resume content:
-
-| File | Purpose |
-|------|---------|
-| `_data/experience.yml` | Work history |
-| `_data/education.yml` | Education |
-| `_data/skills.yml` | Skills |
-| `_data/projects.yml` | Projects |
-| `_data/links.yml` | Links |
-| `_data/recognitions.yml` | Awards/recognitions |
-| `_data/associations.yml` | Professional associations |
-| `_data/interests.yml` | Interests |
-
-To update name, title, contact info, or theme settings, edit `_config.yml`.
-
-### Local Development
-
-1. Install dependencies (if not already done):
-   ```bash
-   bundle install
-   ```
-
-2. Start the local server:
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-3. View the site at `http://localhost:4000`
-
-The site will auto-regenerate as you make changes.
-
-### Deploying Changes
-
-Simply push your changes to GitHub. GitHub Pages will automatically build and deploy the site.
+## Local development
 
 ```bash
-git add .
-git commit -m "Update resume content"
-git push origin main
+npm ci
+npm run dev
 ```
 
-Allow 1-2 minutes for GitHub Pages to build and publish your changes.
+Open <http://localhost:4321>.
 
-## Site Structure
+## Checks
 
-```
-├── _config.yml          # Site settings (name, title, contact, sections)
-├── _data/               # Resume content (YAML files)
-├── _layouts/            # Page templates
-├── _includes/           # Reusable components
-├── _sass/               # SCSS stylesheets
-├── css/                 # Compiled CSS
-├── images/              # Images (avatar, favicon)
-└── index.html           # Entry point
-```
-
-## Troubleshooting
-
-### Build Errors
-If `bundle exec jekyll serve` fails, try:
 ```bash
-bundle exec jekyll clean
-bundle exec jekyll serve
+npm run format:check   # Prettier
+npm run lint:md        # markdownlint-cli2
+npm run lint:prose     # cspell + sentencefmt
+npm run check          # astro check
+npm run build          # astro build
+npm run lint:html      # html-validate against dist/
+npm run lint:links     # internal links against dist/
+npm run audit:a11y     # advisory WCAG A/AA audit against dist/
 ```
 
-### Images Not Updating
-Clear Jekyll's cache:
+Vale runs in CI via `vale-cli/vale-action`; external links are checked weekly by the
+`External link check` workflow.
+
+## Writing
+
+Articles live in `src/content/articles/` as Markdown with frontmatter:
+
+```yaml
+---
+title: 'Post title'
+subtitle: 'Optional series subtitle'
+description: 'One-paragraph summary used by cards and RSS.'
+date: 2026-11-17
+series: 'wysiwid-petstore' # optional
+order: 9 # optional, within the series
+originalUrl: 'https://medium.com/...' # optional, for republished posts
+source: 'medium' # optional, medium or blog
+tags: []
+draft: false
+---
+```
+
+The H1 is rendered from `title`, so article bodies should start with the first paragraph.
+Repeated boilerplate (AI disclosure, consulting CTA) lives in
+`src/components/ArticleFooter.astro`; generated series navigation lives in
+`src/components/SeriesNav.astro`.
+
+Series metadata lives in `src/data/series.ts`.
+
+## Migrating the old manuscript repo
+
+The one-time migration script reads `../blog` by default:
+
 ```bash
-bundle exec jekyll clean
+BLOG_SOURCE=/path/to/blog npm run migrate:articles
 ```
 
-### GitHub Pages Not Updating
-- Verify the build completes at github.com/dave-elkins/dave-elkins.github.io > Settings > Pages
-- Check the Actions tab for build errors
+It copies the numbered Markdown files from `blog/series/`, adds frontmatter, rewrites
+relative `.md` links and known Medium URLs to `/writing/<slug>/` routes, resolves the old
+`#` placeholders, and removes the repeated boilerplate sections.
+
+Dates in migrated posts are derived from the first git commit for each file in the old
+`blog` repo. These are approximate publication dates and can be corrected in frontmatter.
+
+## Deployment
+
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds with Astro and deploys
+the `dist/` directory with the official GitHub Pages actions.
+
+In the GitHub repository settings, **Settings → Pages → Build and deployment → Source**
+must be set to **GitHub Actions**. An empty `public/.nojekyll` is copied into `dist/` so
+GitHub Pages does not run Jekyll over the generated output.
+
+Site URL and trailing-slash behavior are configured in `astro.config.mjs`.
+
+## Résumé data and design sources
+
+The résumé content is maintained in `src/data/resume.ts`, with components in
+`src/components/resume/` and styles in `src/styles/resume.css`. Original icon and template
+design sources are preserved in `design/` and are not published.

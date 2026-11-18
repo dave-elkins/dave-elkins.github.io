@@ -1,0 +1,42 @@
+---
+import { resume } from '../../data/resume';
+import GitHubIcon from './icons/GitHubIcon.astro';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
+import WebsiteIcon from './icons/WebsiteIcon.astro';
+
+// Ported from _includes/icon-links.html. Only links actually enabled in
+// _config.yml are included; the commented-out Twitter/Medium/Dribbble/
+// Facebook/Instagram gates are intentionally omitted.
+const links = [
+    {
+        url: resume.socialLinks.github,
+        label: 'GitHub',
+        itemprop: 'sameAs',
+        Icon: GitHubIcon,
+    },
+    {
+        url: resume.socialLinks.linkedin,
+        label: 'LinkedIn',
+        itemprop: 'sameAs',
+        Icon: LinkedInIcon,
+    },
+    {
+        url: resume.socialLinks.website,
+        label: 'Website',
+        itemprop: 'url',
+        Icon: WebsiteIcon,
+    },
+].filter((link) => Boolean(link.url));
+---
+
+{links.length > 0 && (
+    <ul class="icon-links">
+        {links.map(({ url, label, itemprop, Icon }) => (
+            <li class="icon-link-item">
+                <a href={url} class="icon-link" itemprop={itemprop} aria-label={label}>
+                    <Icon />
+                </a>
+            </li>
+        ))}
+    </ul>
+)}

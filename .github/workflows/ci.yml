@@ -1,0 +1,45 @@
+name: CI
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v5
+            - name: Set up Node
+              uses: actions/setup-node@v6
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+            - name: Install dependencies
+              run: npm ci
+            - name: Check formatting
+              run: npm run format:check
+            - name: Check Markdown structure
+              run: npm run lint:md
+            - name: Spell check
+              run: npx cspell --no-progress "src/content/**/*.md" "README.md"
+            - name: Check sentence formatting
+              run: python3 tools/sentencefmt.py --check src/content/articles
+            - name: Check Vale prose style
+              uses: vale-cli/vale-action@v2
+              with:
+                  files: '["src/content/articles/"]'
+                  version: 3.4.1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Astro check
+              run: npm run check
+            - name: Build
+              run: npm run build
+            - name: Validate HTML
+              run: npm run lint:html
+            - name: Check internal links
+              run: npm run lint:links
+            - name: Accessibility audit (advisory)
+              continue-on-error: true
+              run: npm run audit:a11y

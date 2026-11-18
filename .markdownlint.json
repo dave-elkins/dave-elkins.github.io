@@ -1,0 +1,29 @@
+{
+    "default": true,
+
+    "MD013": false,
+    "MD033": false,
+    "MD036": false,
+    "MD042": false,
+
+    "MD003": { "style": "atx" },
+
+    "MD007": { "indent": 2 },
+
+    "MD024": { "siblings_only": true },
+
+    "MD029": { "style": "ordered" },
+
+    "MD030": {
+        "ul_single": 1,
+        "ol_single": 1,
+        "ul_multi": 1,
+        "ol_multi": 1
+    },
+
+    "MD041": true,
+
+    "MD049": false,
+    "MD050": false,
+    "MD060": false
+}

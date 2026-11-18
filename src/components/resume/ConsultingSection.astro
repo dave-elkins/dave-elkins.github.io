@@ -1,0 +1,29 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Consulting">
+    {resume.consulting.map((item) => (
+        <div class="resume-item">
+            <div class="resume-item-copy">
+                <Markdown content={item.summary} />
+            </div>
+            <h4 class="resume-item-details">I can help with:</h4>
+            <ul class="resume-item-list">
+                {item.services.map((service) => (
+                    <li set:html={service} />
+                ))}
+            </ul>
+            <h4 class="resume-item-details">Who I work with best:</h4>
+            <div class="resume-item-copy" set:html={item.ideal_clients} />
+            <div class="resume-item-copy">
+                <a
+                    href={`mailto:${item.contact}`}
+                    set:html={`📩 Reach out at ${item.contact} to start a conversation.`}
+                />
+            </div>
+        </div>
+    ))}
+</ResumeSection>

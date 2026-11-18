@@ -1,0 +1,16 @@
+---
+import { resume } from '../../data/resume';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Additional Links">
+    <div class="resume-item">
+        <ul class="resume-item-list">
+            {resume.links.map((link) => (
+                <li>
+                    <a href={link.url} itemprop="url" set:html={link.description} />
+                </li>
+            ))}
+        </ul>
+    </div>
+</ResumeSection>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { resume } from '../data/resume';
+import '../styles/resume.css';
+
+import AssociationsSection from '../components/resume/AssociationsSection.astro';
+import ConsultingSection from '../components/resume/ConsultingSection.astro';
+import EducationSection from '../components/resume/EducationSection.astro';
+import ExperienceSection from '../components/resume/ExperienceSection.astro';
+import InterestsSection from '../components/resume/InterestsSection.astro';
+import LinksSection from '../components/resume/LinksSection.astro';
+import PrintSocialLinksSection from '../components/resume/PrintSocialLinksSection.astro';
+import ProjectsSection from '../components/resume/ProjectsSection.astro';
+import RecognitionSection from '../components/resume/RecognitionSection.astro';
+import ResumeHeader from '../components/resume/ResumeHeader.astro';
+import SkillsSection from '../components/resume/SkillsSection.astro';
+---
+
+<BaseLayout title={resume.siteTitle} description={resume.siteDescription}>
+    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+        {resume.telephone === '' ? (
+            <meta itemprop="telephone" content="" />
+        ) : (
+            <meta itemprop="telephone" content={resume.telephone} />
+        )}
+        <meta itemprop="address" content={resume.address} />
+
+        <ResumeHeader />
+
+        {resume.sections.consulting && <ConsultingSection />}
+        {resume.sections.experience && <ExperienceSection />}
+        {resume.sections.education && <EducationSection />}
+        {resume.sections.projects && <ProjectsSection />}
+        {resume.sections.skills && <SkillsSection />}
+        {resume.sections.recognition && <RecognitionSection />}
+        {resume.sections.associations && <AssociationsSection />}
+        {resume.sections.interests && <InterestsSection />}
+        {resume.sections.links && <LinksSection />}
+        {resume.printSocialLinks && <PrintSocialLinksSection />}
+
+        <footer class="page-footer">
+            <p class="footer-line">
+                Made using{' '}
+                <a href="https://github.com/jglovier/resume-template">Resume Template Theme </a>.
+            </p>
+        </footer>
+    </div>
+</BaseLayout>

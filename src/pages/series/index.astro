@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { series } from '../../data/series';
+---
+
+<BaseLayout
+    title="Series"
+    description="Multi-part series by Dave Elkins on software design and legibility."
+>
+    <div class="page-shell">
+        <p class="eyebrow">Series</p>
+        <h1>Series</h1>
+        <p class="lede">Longer arguments, built one post at a time.</p>
+        <ul class="card-list">
+            {series.map((item) => (
+                <li>
+                    <a class="card" href={`/series/${item.key}/`}>
+                        <h2>{item.title}</h2>
+                        <p>{item.description}</p>
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</BaseLayout>

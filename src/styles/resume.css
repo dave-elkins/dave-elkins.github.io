@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700');
+
+/* Resume styles ported from _sass/*.scss (plain CSS). Scoped to .wrapper where
+   needed so the shared global.css typography does not override Jekyll styles. */
+
+:root {
+    --resume-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --resume-serif: 'Lora', 'Minion Pro', Palatino, Georgia, serif;
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: '';
+    display: table;
+}
+
+.wrapper::after {
+    clear: both;
+}
+
+.wrapper {
+    max-width: 728px;
+    padding: 0 24px;
+    margin: 0 auto;
+    color: #333;
+    font-family: var(--resume-serif);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.wrapper ::selection {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-shadow: none;
+}
+
+.wrapper .group::before,
+.wrapper .group::after {
+    content: '';
+    display: table;
+}
+
+.wrapper .group::after {
+    clear: both;
+}
+
+/* Section headers */
+
+.wrapper .section-header {
+    border-top: 4px solid #c7c7c7;
+    border-bottom: 2px solid #c7c7c7;
+    padding: 0.2rem 0 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.wrapper .section-header h2 {
+    font-family: var(--resume-sans);
+    font-weight: 900;
+    font-size: 1.75rem;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Page header */
+
+.wrapper .page-header {
+    padding: 1.5rem 0;
+}
+
+.wrapper .page-header .avatar {
+    width: 95px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+.wrapper .page-header .header-name {
+    font-family: var(--resume-sans);
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: -0.15rem;
+    line-height: 1;
+    margin: 1rem 0 0;
+}
+
+.wrapper .page-header .header-contact-info {
+    font-family: var(--resume-sans);
+    text-align: center;
+}
+
+.wrapper .page-header .header-contact-info p a {
+    color: inherit;
+}
+
+.wrapper .page-header .title-bar {
+    border-top: 4px solid #c7c7c7;
+    border-bottom: 2px solid #c7c7c7;
+    padding: 0.4rem 0;
+    margin-top: 2rem;
+}
+
+.wrapper .page-header .title-bar::before,
+.wrapper .page-header .title-bar::after {
+    content: '';
+    display: table;
+}
+
+.wrapper .page-header .title-bar::after {
+    clear: both;
+}
+
+.wrapper .page-header .header-title {
+    font-family: var(--resume-sans);
+    font-weight: 300;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    letter-spacing: -0.05rem;
+    text-align: center;
+    margin: 0 0 0.5rem;
+}
+
+@media (min-width: 600px) {
+    .wrapper .page-header .header-title {
+        float: left;
+        margin: 0;
+    }
+}
+
+.wrapper .page-header .executive-summary p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .wrapper .page-header .executive-summary {
+        font-size: 1.125rem;
+    }
+}
+
+/* Icon links */
+
+.wrapper .icon-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    top: 4px;
+    text-align: center;
+    border-top: 2px solid #c7c7c7;
+    padding-top: 0.4rem;
+}
+
+@media (min-width: 600px) {
+    .wrapper .icon-links {
+        float: right;
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+.wrapper .icon-links .icon-link-item {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.wrapper .icon-links .icon-link {
+    display: inline-block;
+}
+
+.wrapper .icon-links .icon-link:hover .icon path {
+    fill: #333;
+    transition: all 0.2s ease;
+}
+
+.wrapper .icon-links .icon {
+    height: 28px;
+}
+
+/* Contact button */
+
+.wrapper .contact-button {
+    border-radius: 3px;
+    background-color: #efefef;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 1.5rem auto;
+    width: 220px;
+    font-size: 1.375rem;
+    font-family: var(--resume-sans);
+    font-weight: 300;
+    color: #333;
+    line-height: 55px;
+    transition: all 0.2s ease;
+}
+
+.wrapper .contact-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.wrapper .contact-button.not-looking {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* Résumé content */
+
+.wrapper .content-section {
+    margin: 0 0 3rem;
+}
+
+.wrapper .content-section .resume-item {
+    margin-bottom: 2rem;
+}
+
+.wrapper .content-section .resume-item:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper .content-section .resume-item-title {
+    font-family: var(--resume-sans);
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.05rem;
+    line-height: 1;
+}
+
+.wrapper .content-section .resume-item-details {
+    font-size: 1.125rem;
+    margin: 0 0 0.75rem;
+    line-height: 1;
+}
+
+.wrapper .content-section .resume-item-details.award-title {
+    font-size: 1rem;
+}
+
+.wrapper .content-section .resume-item-title a,
+.wrapper .content-section .resume-item-details a,
+.wrapper .content-section .resume-item-copy a,
+.wrapper .content-section .resume-item-list a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.wrapper .content-section .resume-item-title a:hover,
+.wrapper .content-section .resume-item-details a:hover,
+.wrapper .content-section .resume-item-copy a:hover,
+.wrapper .content-section .resume-item-list a:hover {
+    border-bottom: none;
+    color: #9c9c9c;
+}
+
+.wrapper .content-section .resume-item-copy {
+    margin: 0.75rem 0 0;
+}
+
+/* Focus styles for keyboard users */
+
+.wrapper a:focus-visible,
+.wrapper .contact-button:focus-visible {
+    outline: 2px solid #333;
+    outline-offset: 3px;
+}
+
+/* Footer attribution */
+
+.wrapper .page-footer {
+    border-top: 4px solid #c7c7c7;
+    padding-top: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.wrapper .page-footer .footer-line {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #999;
+}
+
+.wrapper .page-footer .footer-line > a {
+    font-weight: 700;
+    color: #333;
+}
+
+.print-only {
+    display: none !important;
+}
+
+@media print {
+    .site-header,
+    .site-footer,
+    .skip-link {
+        display: none !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    body {
+        font-size: 12px;
+        line-height: 1rem;
+    }
+
+    .wrapper {
+        max-width: none;
+        padding: 0;
+    }
+
+    .wrapper .page-header {
+        padding: 1rem 0 0.2rem;
+    }
+
+    .wrapper .page-header .header-name {
+        font-family: var(--resume-sans);
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0 0 0.2rem;
+    }
+
+    .wrapper .section-header {
+        border-top: 1px solid #c7c7c7;
+        border-bottom: 1px solid #c7c7c7;
+        padding: 0.2rem 0;
+        margin-bottom: 1rem;
+    }
+
+    .wrapper .section-header h2 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .wrapper .content-section {
+        margin: 0 0 1rem;
+    }
+
+    .wrapper .content-section .resume-item {
+        margin-bottom: 1rem;
+    }
+
+    .wrapper .content-section .resume-item-title {
+        font-size: 16px;
+        line-height: 0.7em;
+    }
+
+    .wrapper .content-section .resume-item-details {
+        font-size: 12px;
+        margin: 0 0 0.75rem;
+        line-height: 0.7em;
+        font-style: italic;
+    }
+
+    .wrapper .content-section .resume-item-details.award-title {
+        font-size: 11px;
+    }
+}

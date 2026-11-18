@@ -1,0 +1,16 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Skills">
+    {resume.skills.map((skill) => (
+        <div class="resume-item">
+            <h4 class="resume-item-details">{skill.skill}</h4>
+            <div class="resume-item-copy">
+                <Markdown content={skill.description} />
+            </div>
+        </div>
+    ))}
+</ResumeSection>

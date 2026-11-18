@@ -1,0 +1,40 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Education">
+    {resume.education.map((education) => (
+        <div
+            class="resume-item"
+            itemscope
+            itemprop="alumniOf"
+            itemtype="http://schema.org/CollegeOrUniversity"
+        >
+            <h3 class="resume-item-title" itemprop="name" set:html={education.uni} />
+            <h4
+                class="resume-item-details group"
+                itemprop="description"
+                set:html={`${education.degree} &bull; ${education.year}`}
+            />
+            {education.award && (
+                <h5
+                    class="resume-item-details award-title"
+                    itemprop="description"
+                    set:html={education.award}
+                />
+            )}
+            <div class="resume-item-copy" itemprop="description">
+                {education.awards && education.awards.length > 0 && (
+                    <ul class="resume-item-list">
+                        {education.awards.map((award) => (
+                            <li set:html={award.award} />
+                        ))}
+                    </ul>
+                )}
+                {education.summary && <Markdown content={education.summary} />}
+            </div>
+        </div>
+    ))}
+</ResumeSection>

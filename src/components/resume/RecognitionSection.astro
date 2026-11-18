@@ -1,0 +1,20 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Recognition">
+    {resume.recognition.map((recognition) => (
+        <div class="resume-item">
+            <h3 class="resume-item-title" itemprop="award" set:html={recognition.award} />
+            <h4
+                class="resume-item-details"
+                set:html={`${recognition.organization} &bull; ${recognition.year}`}
+            />
+            <div class="resume-item-copy">
+                <Markdown content={recognition.summary} />
+            </div>
+        </div>
+    ))}
+</ResumeSection>

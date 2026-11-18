@@ -1,0 +1,26 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Experience">
+    {resume.experience.map((job) => (
+        <div
+            class="resume-item"
+            itemscope
+            itemprop="worksFor"
+            itemtype="http://schema.org/Organization"
+        >
+            <h3 class="resume-item-title" itemprop="name" set:html={job.company} />
+            <h4
+                class="resume-item-details"
+                itemprop="description"
+                set:html={`${job.position} &bull; ${job.duration}`}
+            />
+            <div class="resume-item-copy">
+                <Markdown content={job.summary} />
+            </div>
+        </div>
+    ))}
+</ResumeSection>

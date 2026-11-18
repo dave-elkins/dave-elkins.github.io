@@ -1,0 +1,14 @@
+---
+import { resume } from '../../data/resume';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Outside Interests">
+    <div class="resume-item">
+        <ul class="resume-item-list">
+            {resume.interests.map((interest) => (
+                <li set:html={interest.description} />
+            ))}
+        </ul>
+    </div>
+</ResumeSection>

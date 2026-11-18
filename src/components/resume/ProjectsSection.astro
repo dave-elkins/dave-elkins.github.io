@@ -1,0 +1,28 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Projects">
+    {resume.projects.map((project) => (
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+            <meta itemprop="creator" content={resume.name} itemtype="http://schema.org/Person" />
+            <h3 class="resume-item-title" itemprop="name">
+                {project.url ? (
+                    <a href={project.url} itemprop="url" set:html={project.project} />
+                ) : (
+                    <Fragment set:html={project.project} />
+                )}
+            </h3>
+            <h4
+                class="resume-item-details"
+                itemprop="description"
+                set:html={`${project.role}  &bull; ${project.duration}`}
+            />
+            <div class="resume-item-copy">
+                <Markdown content={project.description} />
+            </div>
+        </div>
+    ))}
+</ResumeSection>

@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { series, type SeriesInfo } from '../../data/series';
+
+export async function getStaticPaths() {
+    return series.map((item) => ({ params: { series: item.key }, props: { series: item } }));
+}
+
+interface Props {
+    series: SeriesInfo;
+}
+
+const { series: currentSeries } = Astro.props;
+const articles = (
+    await getCollection('articles', ({ data }) => !data.draft && data.series === currentSeries.key)
+).sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+---
+
+<BaseLayout title={currentSeries.title} description={currentSeries.description}>
+    <div class="page-shell">
+        <p class="eyebrow">Series · {articles.length} posts</p>
+        <h1>{currentSeries.title}</h1>
+        <p class="lede">{currentSeries.description}</p>
+        <ol class="card-list series-list">
+            {articles.map((entry) => (
+                <li>
+                    <ArticleCard entry={entry} compact />
+                </li>
+            ))}
+        </ol>
+        <p>
+            <a href="/series/">← All series</a>
+        </p>
+    </div>
+</BaseLayout>
+
+<style>
+    .series-list {
+        counter-reset: series;
+    }
+</style>

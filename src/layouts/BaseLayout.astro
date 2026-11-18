@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+    title: string;
+    description: string;
+    canonical?: string;
+    ogImage?: string;
+}
+
+const { title, description, canonical, ogImage } = Astro.props;
+const site = Astro.site ?? new URL('https://dave-elkins.github.io');
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site).href;
+const ogImageUrl = ogImage ? new URL(ogImage, site).href : undefined;
+const fullTitle = title === 'Dave Elkins' ? title : `${title} · Dave Elkins`;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{fullTitle}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+        {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+        <meta name="twitter:card" content={ogImageUrl ? 'summary_large_image' : 'summary'} />
+        <meta name="twitter:title" content={fullTitle} />
+        <meta name="twitter:description" content={description} />
+        {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+        <link rel="alternate" type="application/rss+xml" title="Dave Elkins" href="/rss.xml" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">
+            Skip to content
+        </a>
+        <header class="site-header">
+            <div class="site-header__inner">
+                <a class="site-brand" href="/">
+                    Dave Elkins
+                </a>
+                <nav aria-label="Primary">
+                    <a href="/writing/">Writing</a>
+                    <a href="/series/">Series</a>
+                    <a href="/about/">About</a>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <slot />
+        </main>
+        <footer class="site-footer">
+            <p>
+                © {new Date().getFullYear()} Dave Elkins · <a href="/rss.xml">RSS</a>
+            </p>
+        </footer>
+    </body>
+</html>

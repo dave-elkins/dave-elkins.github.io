@@ -1,0 +1,15 @@
+---
+import { marked } from 'marked';
+
+interface Props {
+    content: string;
+}
+
+const { content } = Astro.props;
+
+// Jekyll used kramdown's `markdownify`. Marked is used here instead; entities
+// and trusted inline HTML are intentionally emitted unescaped.
+const html = marked.parse(content, { async: false });
+---
+
+<Fragment set:html={html} />

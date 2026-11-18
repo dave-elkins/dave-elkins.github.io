@@ -1,0 +1,32 @@
+---
+import { resume } from '../../data/resume';
+import Markdown from './Markdown.astro';
+import ResumeSection from './ResumeSection.astro';
+---
+
+<ResumeSection title="Associations">
+    {resume.associations.map((association) => (
+        <div
+            class="resume-item"
+            itemscope
+            itemprop="memberOf"
+            itemtype="http://schema.org/Organization"
+        >
+            <h3 class="resume-item-title" itemprop="name">
+                {association.url ? (
+                    <a href={association.url} set:html={association.organization} />
+                ) : (
+                    <Fragment set:html={association.organization} />
+                )}
+            </h3>
+            <h4
+                class="resume-item-details"
+                itemprop="description"
+                set:html={`${association.role} &bull; ${association.year}`}
+            />
+            <div class="resume-item-copy">
+                <Markdown content={association.summary} />
+            </div>
+        </div>
+    ))}
+</ResumeSection>

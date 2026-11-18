@@ -1,0 +1,46 @@
+{
+    "name": "dave-elkins-github-io",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "check": "astro check",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "lint": "npm run lint:md && npm run lint:prose && npm run lint:html",
+        "lint:md": "markdownlint-cli2 \"src/**/*.md\" \"README.md\"",
+        "lint:prose": "cspell --no-progress \"src/content/**/*.md\" && python3 tools/sentencefmt.py --check src/content/articles",
+        "lint:html": "html-validate \"dist/**/*.html\"",
+        "lint:links": "node tools/check-links.mjs",
+        "audit:a11y": "node tools/check-a11y.mjs",
+        "migrate:articles": "node tools/migrate-articles.mjs"
+    },
+    "dependencies": {
+        "@astrojs/rss": "^4.0.19",
+        "@astrojs/sitemap": "^3.7.5",
+        "astro": "^7.4.12",
+        "marked": "^18.2.1",
+        "yaml": "^2.9.1",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@astrojs/check": "^0.9.12",
+        "@cspell/dict-en_us": "^4.4.43",
+        "@cspell/dict-python": "^4.5.3",
+        "@cspell/dict-software-terms": "^5.4.9",
+        "axe-core": "^4.14.1",
+        "cspell": "^10.5.1",
+        "html-validate": "^11.21.1",
+        "jsdom": "^29.1.1",
+        "markdownlint-cli2": "^0.24.1",
+        "prettier": "^3.10.1",
+        "prettier-plugin-astro": "^1.1.2",
+        "typescript": "^6.0.3"
+    }
+}

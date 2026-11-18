@@ -1,0 +1,43 @@
+---
+import { resume } from '../../data/resume';
+import ResumeSection from './ResumeSection.astro';
+
+// Ported from _includes/print-social-links.html. Medium is not part of the
+// Jekyll print list, so it is intentionally absent here.
+const labels: Record<keyof typeof resume.socialLinks, string> = {
+    github: 'Github',
+    twitter: 'Twitter',
+    medium: 'Medium',
+    dribbble: 'Dribbble',
+    facebook: 'Facebook',
+    linkedin: 'LinkedIn',
+    instagram: 'Instagram',
+    website: 'Website',
+};
+
+const order: Array<keyof typeof resume.socialLinks> = [
+    'github',
+    'twitter',
+    'dribbble',
+    'facebook',
+    'linkedin',
+    'instagram',
+    'website',
+];
+
+const links = order
+    .map((key) => ({ label: labels[key], url: resume.socialLinks[key] }))
+    .filter((entry) => Boolean(entry.url));
+---
+
+<ResumeSection title="Social Links" class="print-only">
+    <div class="resume-item">
+        <ul>
+            {links.map(({ label, url }) => (
+                <li>
+                    <strong>{label}</strong>: {url}
+                </li>
+            ))}
+        </ul>
+    </div>
+</ResumeSection>

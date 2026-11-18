@@ -1,0 +1,37 @@
+---
+import { resume } from '../../data/resume';
+import IconLinks from './IconLinks.astro';
+import Markdown from './Markdown.astro';
+---
+
+<header class="page-header">
+    {resume.avatar === 'true' && (
+        <img src="/images/avatar.png" alt="Dave Elkins" class="avatar no-print" itemprop="image" />
+    )}
+
+    <h1 class="header-name" itemprop="name" set:html={resume.name} />
+
+    {resume.displayHeaderContactInfo === 'true' && (
+        <div class="header-contact-info">
+            <p set:html={resume.headerContactInfo} />
+        </div>
+    )}
+
+    <div class="title-bar no-print">
+        <h2 class="header-title" itemprop="jobTitle" set:html={resume.title} />
+        <IconLinks />
+    </div>
+
+    <div class="executive-summary" itemprop="description">
+        <Markdown content={resume.intro} />
+    </div>
+
+    {resume.contactButton === 'yes' && (
+        <a href={`mailto:${resume.email}`} class="contact-button no-print" itemprop="email">
+            Work with me
+        </a>
+    )}
+    {resume.contactButton === 'no' && (
+        <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
+    )}
+</header>

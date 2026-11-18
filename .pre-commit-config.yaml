@@ -1,0 +1,24 @@
+repos:
+    - repo: local
+      hooks:
+          - id: sentencefmt
+            name: sentence formatting
+            entry: python3 tools/sentencefmt.py
+            language: system
+            files: '^src/content/articles/.*\.md$'
+          - id: markdownlint
+            name: markdown structure
+            entry: npx markdownlint-cli2
+            language: system
+            files: '^src/.*\.md$'
+          - id: cspell
+            name: spell check
+            entry: npx cspell --no-progress
+            language: system
+            files: '^src/content/.*\.md$'
+          - id: prettier
+            name: prettier
+            entry: npx prettier --write
+            language: system
+            files: '\.(astro|ts|js|mjs|css|json|md|yml|yaml)$'
+            exclude: '^(package-lock\.json|public/images/)'

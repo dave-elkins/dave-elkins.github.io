@@ -1,0 +1,62 @@
+---
+interface Props {
+    originalUrl?: string;
+}
+
+const { originalUrl } = Astro.props;
+---
+
+<aside class="article-footer" aria-label="About this article">
+    {originalUrl && (
+        <p>
+            Originally published on{' '}
+            <a href={originalUrl} rel="noopener noreferrer">
+                Medium
+            </a>
+            . This site is now the canonical home for the series.
+        </p>
+    )}
+
+    <h2>AI Usage Disclosure</h2>
+    <p>
+        Portions of this work used OpenCode (2026), powered by the opencode/big-pickle large
+        language model.
+    </p>
+    <p>
+        Anomaly Co. (2026). <em>OpenCode</em> (opencode/big-pickle) [Large language model].
+        <a href="https://opencode.ai" rel="noopener noreferrer">
+            https://opencode.ai
+        </a>
+    </p>
+
+    <hr />
+
+    <h2>Let's Build Something Together</h2>
+    <p>
+        I help healthcare and AI-enabled software teams design systems that are clear, testable, and
+        resilient — using the same Concept Design and WYSIWID principles this series explores.
+        Whether you need an architecture review, help with HIPAA-compliant AI workflows, or
+        fractional technical leadership, I'd love to hear about what you're building.
+    </p>
+    <p>
+        <a href="https://fenohlth.com" rel="noopener noreferrer">
+            → fenohlth.com
+        </a>
+    </p>
+</aside>
+
+<style>
+    .article-footer {
+        max-width: var(--measure);
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-border);
+        color: var(--color-muted);
+        font-size: 0.95rem;
+    }
+
+    .article-footer h2 {
+        font-size: 1.15rem;
+        margin-top: 1.5rem;
+    }
+</style>
