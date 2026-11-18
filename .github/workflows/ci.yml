@@ -26,7 +26,7 @@ jobs:
             - name: Check sentence formatting
               run: python3 tools/sentencefmt.py --check src/content/articles
             - name: Check Vale prose style
-              uses: vale-cli/vale-action@v2
+              uses: vale-cli/vale-action@v3
               with:
                   files: '["src/content/articles/"]'
                   version: 3.4.1
