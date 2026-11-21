@@ -17,6 +17,7 @@
         "lint:md": "markdownlint-cli2 \"src/**/*.md\" \"README.md\" \"DESIGN.md\"",
         "lint:prose": "cspell --no-progress \"src/content/**/*.md\" && python3 tools/sentencefmt.py --check src/content/articles",
         "lint:html": "html-validate \"dist/**/*.html\"",
+        "lint:research": "node tools/check-research.mjs",
         "lint:links": "node tools/check-links.mjs",
         "audit:a11y": "node tools/check-a11y.mjs",
         "migrate:articles": "node tools/migrate-articles.mjs"

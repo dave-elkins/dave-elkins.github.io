@@ -22,6 +22,7 @@ npm run lint:prose     # cspell + sentencefmt
 npm run check          # astro check
 npm run build          # astro build
 npm run lint:html      # html-validate against dist/
+npm run lint:research  # research material stayed out of public/ and dist/
 npm run lint:links     # internal links against dist/
 npm run audit:a11y     # advisory WCAG A/AA audit against dist/
 ```
@@ -56,6 +57,10 @@ Repeated boilerplate (AI disclosure, consulting CTA) lives in
 Series metadata lives in `src/data/series.ts`. Optional `image` and `imageAlt` fields add
 artwork to the top of that series' posts, its series page, and its series cards. Place image
 files in `public/images/`.
+
+## Research and background material
+
+Source material for future series and articles lives in `research/` at the repo root. It is never published: Astro only emits pages from `src/pages/` and copies `public/`, and `npm run lint:research` fails the build if a `research` path appears in `public/` or `dist/`. See `research/README.md` for the layout and for when to use `draft: true` instead.
 
 ## Migrating the old manuscript repo
 

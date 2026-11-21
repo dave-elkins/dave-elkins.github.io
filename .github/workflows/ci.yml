@@ -37,6 +37,8 @@ jobs:
               run: npm run check
             - name: Build
               run: npm run build
+            - name: Check research material is not published
+              run: npm run lint:research
             - name: Validate HTML
               run: npm run lint:html
             - name: Check internal links
