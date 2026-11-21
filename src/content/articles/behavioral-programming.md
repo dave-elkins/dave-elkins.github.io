@@ -4,7 +4,7 @@ description: 'What if you could add a new feature to your codebase without touch
 date: 2026-11-03
 series: 'legible-by-design-the-long-search'
 order: 9
-tags: []
+tags: [architecture, software-history]
 draft: false
 ---
 

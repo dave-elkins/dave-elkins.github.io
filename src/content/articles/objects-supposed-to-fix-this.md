@@ -6,7 +6,7 @@ series: 'legible-by-design-the-long-search'
 order: 5
 originalUrl: 'https://medium.com/@daveelkins/objects-were-supposed-to-fix-this-e3a96cde2f31'
 source: 'medium'
-tags: []
+tags: [architecture, software-history]
 draft: false
 ---
 

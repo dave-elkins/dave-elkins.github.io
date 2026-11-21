@@ -13,7 +13,21 @@ const articles = defineCollection({
         order: z.number().int().positive().optional(),
         originalUrl: z.url().optional(),
         source: z.enum(['medium', 'blog']).default('blog'),
-        tags: z.array(z.string()).default([]),
+        tags: z
+            .array(
+                z.enum([
+                    'architecture',
+                    'concept-design',
+                    'wysiwid',
+                    'sync',
+                    'legibility',
+                    'software-history',
+                    'python',
+                    'refactoring',
+                    'ai',
+                ]),
+            )
+            .default([]),
         draft: z.boolean().default(false),
     }),
 });

@@ -6,7 +6,7 @@ series: 'wysiwid-petstore'
 order: 1
 originalUrl: 'https://medium.com/@daveelkins/why-your-features-keep-breaking-each-other-0a3412cfa20a'
 source: 'medium'
-tags: []
+tags: [concept-design, wysiwid]
 draft: false
 ---
 

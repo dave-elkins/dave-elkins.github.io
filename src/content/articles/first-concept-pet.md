@@ -6,7 +6,7 @@ series: 'wysiwid-petstore'
 order: 3
 originalUrl: 'https://medium.com/@daveelkins/your-first-wysiwid-concept-pet-in-python-1ad4e62a9375'
 source: 'medium'
-tags: []
+tags: [concept-design, wysiwid, python]
 draft: false
 ---
 

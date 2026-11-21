@@ -7,7 +7,7 @@ series: 'legible-by-design-the-long-search'
 order: 1
 originalUrl: 'https://medium.com/@daveelkins/why-your-codebase-is-hard-to-change-and-what-the-field-has-been-getting-wrong-for-decades-64e190354198'
 source: 'medium'
-tags: []
+tags: [architecture, legibility]
 draft: false
 ---
 

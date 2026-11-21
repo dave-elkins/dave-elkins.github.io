@@ -6,7 +6,7 @@ series: 'legible-by-design-the-long-search'
 order: 8
 originalUrl: 'https://medium.com/@daveelkins/hexagonal-slices-and-the-architecture-wars-1a117fe839e8'
 source: 'medium'
-tags: []
+tags: [architecture, software-history]
 draft: false
 ---
 

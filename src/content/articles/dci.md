@@ -6,7 +6,7 @@ series: 'legible-by-design-the-long-search'
 order: 6
 originalUrl: 'https://medium.com/@daveelkins/dci-the-diagnosis-was-right-the-cure-didnt-take-0d294dfde155'
 source: 'medium'
-tags: []
+tags: [architecture, software-history]
 draft: false
 ---
 

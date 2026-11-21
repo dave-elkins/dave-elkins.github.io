@@ -6,7 +6,7 @@ series: 'wysiwid-petstore'
 order: 2
 originalUrl: 'https://medium.com/@daveelkins/what-is-a-concept-designing-the-pet-store-before-writing-a-line-2471163067e1'
 source: 'medium'
-tags: []
+tags: [concept-design, wysiwid]
 draft: false
 ---
 

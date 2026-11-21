@@ -6,7 +6,7 @@ series: 'wysiwid-petstore'
 order: 4
 originalUrl: 'https://medium.com/@daveelkins/concepts-dont-talk-to-each-other-the-sync-engine-ded09cf2f777'
 source: 'medium'
-tags: []
+tags: [concept-design, sync, wysiwid, python]
 draft: false
 ---
 

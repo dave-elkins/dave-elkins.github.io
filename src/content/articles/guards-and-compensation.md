@@ -6,7 +6,7 @@ series: 'wysiwid-petstore'
 order: 5
 originalUrl: 'https://medium.com/@daveelkins/guards-prohibitions-and-business-rules-that-actually-live-somewhere-b263fdaacf42'
 source: 'medium'
-tags: []
+tags: [concept-design, sync, wysiwid, python]
 draft: false
 ---
 

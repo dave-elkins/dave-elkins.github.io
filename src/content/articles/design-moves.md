@@ -4,7 +4,7 @@ description: 'Post 7 of 8 in Building Legible Software — a series on Concept D
 date: 2026-07-17
 series: 'wysiwid-petstore'
 order: 7
-tags: []
+tags: [concept-design, refactoring, wysiwid, python]
 draft: false
 ---
 

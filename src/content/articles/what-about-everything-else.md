@@ -4,7 +4,7 @@ description: 'You have read about MVC, OOP, DCI, patterns, hexagons, slices, and
 date: 2026-11-11
 series: 'legible-by-design-the-long-search'
 order: 10
-tags: []
+tags: [architecture]
 draft: false
 ---
 

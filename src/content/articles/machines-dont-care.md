@@ -7,7 +7,7 @@ series: 'legible-by-design-the-long-search'
 order: 2
 originalUrl: 'https://medium.com/@daveelkins/the-machine-doesnt-care-0b9a96499c74'
 source: 'medium'
-tags: []
+tags: [legibility, architecture]
 draft: false
 ---
 

@@ -6,7 +6,7 @@ series: 'legible-by-design-the-long-search'
 order: 3
 originalUrl: 'https://medium.com/@daveelkins/the-first-legibilists-24213c2d3119'
 source: 'medium'
-tags: []
+tags: [legibility, software-history]
 draft: false
 ---
 

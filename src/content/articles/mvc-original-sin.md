@@ -6,7 +6,7 @@ series: 'legible-by-design-the-long-search'
 order: 4
 originalUrl: 'https://medium.com/@daveelkins/mvc-and-the-original-sin-6b9d5ca1a25a'
 source: 'medium'
-tags: []
+tags: [architecture, software-history]
 draft: false
 ---
 
