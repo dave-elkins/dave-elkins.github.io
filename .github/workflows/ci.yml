@@ -30,6 +30,7 @@ jobs:
               with:
                   files: '["src/content/articles/"]'
                   version: 3.4.1
+                  sync: false
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Astro check
