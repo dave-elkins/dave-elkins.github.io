@@ -37,7 +37,7 @@
         "axe-core": "^4.14.1",
         "cspell": "^10.5.1",
         "html-validate": "^11.21.1",
-        "jsdom": "^29.1.1",
+        "jsdom": "^31.0.1",
         "markdownlint-cli2": "^0.24.1",
         "prettier": "^3.10.1",
         "prettier-plugin-astro": "^1.1.2",
