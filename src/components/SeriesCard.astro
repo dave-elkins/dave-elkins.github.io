@@ -1,0 +1,29 @@
+---
+import type { SeriesInfo } from '../data/series';
+
+interface Props {
+    series: SeriesInfo;
+    headingLevel?: 2 | 3;
+}
+
+const { series, headingLevel = 2 } = Astro.props;
+const Heading = `h${headingLevel}`;
+---
+
+<article class="card card--horizontal">
+    <a href={`/series/${series.key}/`}>
+        {series.image && (
+            <img
+                class="card-thumb"
+                src={series.image}
+                alt={series.imageAlt ?? series.title}
+                loading="lazy"
+                decoding="async"
+            />
+        )}
+        <div class="card__body">
+            <Heading>{series.title}</Heading>
+            <p>{series.description}</p>
+        </div>
+    </a>
+</article>

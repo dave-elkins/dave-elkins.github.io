@@ -1,7 +1,7 @@
 ---
 title: 'Guards, Prohibitions, and Business Rules That Actually Live Somewhere'
 description: 'Post 5 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-06-30
 series: 'wysiwid-petstore'
 order: 5
 originalUrl: 'https://medium.com/@daveelkins/guards-prohibitions-and-business-rules-that-actually-live-somewhere-b263fdaacf42'

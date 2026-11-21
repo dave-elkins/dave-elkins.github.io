@@ -1,7 +1,7 @@
 ---
 title: 'Behavioral Programming: The Academic Road Not Taken'
 description: 'What if you could add a new feature to your codebase without touching any existing code? Not by abstraction. Not by over-engineering. By structural design.'
-date: 2026-07-23
+date: 2026-11-03
 series: 'legible-by-design-the-long-search'
 order: 9
 tags: []

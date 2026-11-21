@@ -14,7 +14,7 @@
         "format": "prettier --write .",
         "format:check": "prettier --check .",
         "lint": "npm run lint:md && npm run lint:prose && npm run lint:html",
-        "lint:md": "markdownlint-cli2 \"src/**/*.md\" \"README.md\"",
+        "lint:md": "markdownlint-cli2 \"src/**/*.md\" \"README.md\" \"DESIGN.md\"",
         "lint:prose": "cspell --no-progress \"src/content/**/*.md\" && python3 tools/sentencefmt.py --check src/content/articles",
         "lint:html": "html-validate \"dist/**/*.html\"",
         "lint:links": "node tools/check-links.mjs",

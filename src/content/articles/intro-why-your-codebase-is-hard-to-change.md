@@ -2,7 +2,7 @@
 title: 'Why Your Codebase Is Hard to Change (And What the Field Has Been Getting Wrong for Decades)'
 subtitle: 'Legible by Design: The Long Search — Introduction'
 description: 'You know the feeling. A new feature request comes in — something that sounds simple, something a user could describe in one sentence. And you open the codebase and start tracing:…'
-date: 2026-07-23
+date: 2026-08-13
 series: 'legible-by-design-the-long-search'
 order: 1
 originalUrl: 'https://medium.com/@daveelkins/why-your-codebase-is-hard-to-change-and-what-the-field-has-been-getting-wrong-for-decades-64e190354198'

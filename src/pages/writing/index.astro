@@ -21,7 +21,7 @@ const articles = (await getCollection('articles', ({ data }) => !data.draft)).so
         <ul class="card-list">
             {articles.map((entry) => (
                 <li>
-                    <ArticleCard entry={entry} />
+                    <ArticleCard entry={entry} showSeriesImage />
                 </li>
             ))}
         </ul>

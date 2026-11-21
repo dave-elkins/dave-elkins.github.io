@@ -1,7 +1,7 @@
 ---
 title: 'View Concepts — Reading Across Features Without Coupling Them'
 description: 'Post 6 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID (What You See Is What It Does) pattern'
-date: 2026-04-29
+date: 2026-07-07
 series: 'wysiwid-petstore'
 order: 6
 tags: []

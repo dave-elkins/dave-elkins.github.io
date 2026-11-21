@@ -1,7 +1,7 @@
 ---
 title: 'The First Legibilists'
 description: 'You are maintaining a codebase that was written before you joined. Nobody on the team wrote most of it. Nobody fully understands all of it.'
-date: 2026-07-23
+date: 2026-08-26
 series: 'legible-by-design-the-long-search'
 order: 3
 originalUrl: 'https://medium.com/@daveelkins/the-first-legibilists-24213c2d3119'

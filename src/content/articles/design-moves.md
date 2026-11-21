@@ -1,7 +1,7 @@
 ---
 title: 'Refactoring With Design Moves — Split, Merge, Lift'
 description: 'Post 7 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-07-17
 series: 'wysiwid-petstore'
 order: 7
 tags: []

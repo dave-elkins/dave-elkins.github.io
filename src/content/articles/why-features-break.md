@@ -1,7 +1,7 @@
 ---
 title: 'Why Your Features Keep Breaking Each Other'
 description: 'Post 1 of 8 in Building Legible Software, a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-04-30
 series: 'wysiwid-petstore'
 order: 1
 originalUrl: 'https://medium.com/@daveelkins/why-your-features-keep-breaking-each-other-0a3412cfa20a'

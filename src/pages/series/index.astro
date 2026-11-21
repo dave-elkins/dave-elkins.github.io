@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SeriesCard from '../../components/SeriesCard.astro';
 import { series } from '../../data/series';
 ---
 
@@ -14,10 +15,7 @@ import { series } from '../../data/series';
         <ul class="card-list">
             {series.map((item) => (
                 <li>
-                    <a class="card" href={`/series/${item.key}/`}>
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                    </a>
+                    <SeriesCard series={item} />
                 </li>
             ))}
         </ul>

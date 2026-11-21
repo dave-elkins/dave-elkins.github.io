@@ -2,7 +2,7 @@
 title: "The Machine Doesn't Care"
 subtitle: 'Legible by Design: The Long Search — Post 2'
 description: 'You have stared at a bug for an hour. The logic looks right. The machine does not care what you meant.'
-date: 2026-07-23
+date: 2026-08-26
 series: 'legible-by-design-the-long-search'
 order: 2
 originalUrl: 'https://medium.com/@daveelkins/the-machine-doesnt-care-0b9a96499c74'

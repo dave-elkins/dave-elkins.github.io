@@ -1,7 +1,7 @@
 ---
 title: 'What Is a Concept? Designing the Pet Store Before Writing a Line'
 description: 'Post 2 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-05-07
 series: 'wysiwid-petstore'
 order: 2
 originalUrl: 'https://medium.com/@daveelkins/what-is-a-concept-designing-the-pet-store-before-writing-a-line-2471163067e1'

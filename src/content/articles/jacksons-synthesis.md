@@ -1,7 +1,7 @@
 ---
 title: "Jackson's Synthesis"
 description: 'Every idea in this series has been pointing at the same place.'
-date: 2026-07-29
+date: 2026-11-21
 series: 'legible-by-design-the-long-search'
 order: 11
 tags: []

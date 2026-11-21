@@ -11,6 +11,8 @@ npm run dev
 
 Open <http://localhost:4321>.
 
+Follow `DESIGN.md` for the site's colors, type scale, shared classes, and card patterns.
+
 ## Checks
 
 ```bash
@@ -51,7 +53,9 @@ Repeated boilerplate (AI disclosure, consulting CTA) lives in
 `src/components/ArticleFooter.astro`; generated series navigation lives in
 `src/components/SeriesNav.astro`.
 
-Series metadata lives in `src/data/series.ts`.
+Series metadata lives in `src/data/series.ts`. Optional `image` and `imageAlt` fields add
+artwork to the top of that series' posts, its series page, and its series cards. Place image
+files in `public/images/`.
 
 ## Migrating the old manuscript repo
 
@@ -65,8 +69,9 @@ It copies the numbered Markdown files from `blog/series/`, adds frontmatter, rew
 relative `.md` links and known Medium URLs to `/writing/<slug>/` routes, resolves the old
 `#` placeholders, and removes the repeated boilerplate sections.
 
-Dates in migrated posts are derived from the first git commit for each file in the old
-`blog` repo. These are approximate publication dates and can be corrected in frontmatter.
+Dates in migrated posts were originally approximated from the first git commit in the old
+`blog` repo, then corrected from Medium publication dates (except for site-only posts).
+Keep `date` aligned with the real publication date when adding or updating articles.
 
 ## Deployment
 
@@ -83,4 +88,5 @@ Site URL and trailing-slash behavior are configured in `astro.config.mjs`.
 
 The résumé content is maintained in `src/data/resume.ts`, with components in
 `src/components/resume/` and styles in `src/styles/resume.css`. Original icon and template
-design sources are preserved in `design/` and are not published.
+design sources, plus the favicon source (`design/de_logo.jfif`), are preserved in `design/`
+and are not published. See `DESIGN.md` for how the favicon PNGs are generated.

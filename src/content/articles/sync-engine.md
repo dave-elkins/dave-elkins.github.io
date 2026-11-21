@@ -1,7 +1,7 @@
 ---
 title: "Concepts Don't Talk to Each Other — The Sync Engine"
 description: 'Post 4 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-05-22
 series: 'wysiwid-petstore'
 order: 4
 originalUrl: 'https://medium.com/@daveelkins/concepts-dont-talk-to-each-other-the-sync-engine-ded09cf2f777'

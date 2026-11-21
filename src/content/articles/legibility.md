@@ -1,7 +1,7 @@
 ---
 title: 'What Makes This Code Legible to AI, Future Teammates, and Yourself'
 description: 'Post 8 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-07-24
 series: 'wysiwid-petstore'
 order: 8
 tags: []

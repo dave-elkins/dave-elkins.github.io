@@ -1,7 +1,7 @@
 ---
 title: 'Objects Were Supposed to Fix This'
 description: 'In the late 1980s, object-oriented programming arrived in the mainstream with a promise so compelling it reshaped the entire industry. The promise was this: your code can model…'
-date: 2026-07-23
+date: 2026-09-10
 series: 'legible-by-design-the-long-search'
 order: 5
 originalUrl: 'https://medium.com/@daveelkins/objects-were-supposed-to-fix-this-e3a96cde2f31'

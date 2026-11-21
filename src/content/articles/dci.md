@@ -1,7 +1,7 @@
 ---
 title: "DCI: The Diagnosis Was Right, the Cure Didn't Take"
 description: 'Post 5 ended with a verdict on object-oriented programming: objects are good at modeling data with associated operations, but interesting behavior happens between objects, in the…'
-date: 2026-07-23
+date: 2026-09-15
 series: 'legible-by-design-the-long-search'
 order: 6
 originalUrl: 'https://medium.com/@daveelkins/dci-the-diagnosis-was-right-the-cure-didnt-take-0d294dfde155'

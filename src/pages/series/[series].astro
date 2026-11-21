@@ -23,7 +23,15 @@ const articles = (
         <p class="eyebrow">Series · {articles.length} posts</p>
         <h1>{currentSeries.title}</h1>
         <p class="lede">{currentSeries.description}</p>
-        <ol class="card-list series-list">
+        {currentSeries.image && (
+            <img
+                class="series-artwork"
+                src={currentSeries.image}
+                alt={currentSeries.imageAlt ?? currentSeries.title}
+                decoding="async"
+            />
+        )}
+        <ol class="card-list">
             {articles.map((entry) => (
                 <li>
                     <ArticleCard entry={entry} compact />
@@ -31,13 +39,9 @@ const articles = (
             ))}
         </ol>
         <p>
-            <a href="/series/">← All series</a>
+            <a class="more-link" href="/series/">
+                ← All series
+            </a>
         </p>
     </div>
 </BaseLayout>
-
-<style>
-    .series-list {
-        counter-reset: series;
-    }
-</style>

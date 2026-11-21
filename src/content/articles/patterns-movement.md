@@ -1,7 +1,7 @@
 ---
 title: 'The Patterns Movement'
 description: 'You have used the word "Factory" in a pull request description. You have heard someone say "that''s a Strategy pattern" in a design meeting. The vocabulary is useful. But it is…'
-date: 2026-07-23
+date: 2026-09-23
 series: 'legible-by-design-the-long-search'
 order: 7
 originalUrl: 'https://medium.com/@daveelkins/the-patterns-movement-36ad5aa9272c'

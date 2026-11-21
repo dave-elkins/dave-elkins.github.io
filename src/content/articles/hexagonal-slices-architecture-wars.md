@@ -1,7 +1,7 @@
 ---
 title: 'Hexagonal, Slices, and the Architecture Wars'
 description: 'Every architecture you have worked in was a reaction to the one before it. Layers gave way to hexagons. Hexagons gave way to slices. Each one solved a real problem and left a…'
-date: 2026-07-23
+date: 2026-10-05
 series: 'legible-by-design-the-long-search'
 order: 8
 originalUrl: 'https://medium.com/@daveelkins/hexagonal-slices-and-the-architecture-wars-1a117fe839e8'

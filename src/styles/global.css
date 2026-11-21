@@ -11,6 +11,9 @@
     --font-serif: 'Lora', Georgia, Cambria, 'Times New Roman', serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     --measure: 46rem;
+    --article-measure: 60rem;
+    --thumb-size: 10rem;
+    --thumb-size-sm: 7rem;
     --radius: 0.5rem;
 }
 
@@ -214,6 +217,12 @@ ol {
         transform 120ms ease;
 }
 
+.card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .card:hover {
     border-color: var(--color-accent);
     transform: translateY(-2px);
@@ -225,19 +234,83 @@ ol {
     font-size: 1.2rem;
 }
 
+.card--compact h2,
+.card--compact h3 {
+    font-size: 1.1rem;
+}
+
 .card p {
     margin: 0;
     color: var(--color-muted);
     font-size: 0.95rem;
 }
 
+/* Shared building blocks for cards. Every listing card uses the same shell
+   (`.card`) and, when it has artwork, the same thumbnail/body layout. */
+.card--horizontal {
+    overflow: hidden;
+    padding: 0;
+}
+
+.card--horizontal a {
+    display: flex;
+    align-items: center;
+}
+
+.card-thumb {
+    display: block;
+    flex: 0 0 var(--thumb-size);
+    width: var(--thumb-size);
+    aspect-ratio: 11 / 6;
+    object-fit: cover;
+    margin: 1rem 0 1rem 1.25rem;
+    border-right: 1px solid var(--color-border);
+    background: var(--color-accent-soft);
+}
+
+.card__body {
+    min-width: 0;
+    padding: 1rem 1.25rem;
+}
+
+@media (max-width: 600px) {
+    .card-thumb {
+        flex-basis: var(--thumb-size-sm);
+        width: var(--thumb-size-sm);
+    }
+}
+
+.subtitle {
+    color: var(--color-muted);
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
 .meta {
     color: var(--color-muted);
     font-size: 0.85rem;
+    margin: 0.5rem 0 0;
+}
+
+.more-link {
+    font-weight: 600;
+}
+
+.series-artwork {
+    display: block;
+    width: 100%;
+    max-width: var(--article-measure);
+    margin: 2rem auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-accent-soft);
 }
 
 .prose {
-    max-width: var(--measure);
+    max-width: var(--article-measure);
+    margin-inline: auto;
     font-family: var(--font-serif);
     font-size: 1.075rem;
     line-height: 1.75;
@@ -259,8 +332,8 @@ ol {
 }
 
 .article-header {
-    max-width: var(--measure);
-    margin-bottom: 2.5rem;
+    max-width: var(--article-measure);
+    margin: 0 auto 2.5rem;
 }
 
 .article-header h1 {
@@ -272,8 +345,8 @@ ol {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    max-width: var(--measure);
-    margin-top: 3rem;
+    max-width: var(--article-measure);
+    margin: 3rem auto 0;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-border);
 }

@@ -1,7 +1,7 @@
 ---
 title: 'Your First WYSIWID Concept — Pet in Python'
 description: 'Post 3 of 8 in Building Legible Software — a series on Concept Design and the WYSIWID pattern'
-date: 2026-04-29
+date: 2026-05-15
 series: 'wysiwid-petstore'
 order: 3
 originalUrl: 'https://medium.com/@daveelkins/your-first-wysiwid-concept-pet-in-python-1ad4e62a9375'

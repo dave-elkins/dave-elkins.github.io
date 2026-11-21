@@ -17,7 +17,7 @@ import SkillsSection from '../components/resume/SkillsSection.astro';
 ---
 
 <BaseLayout title={resume.siteTitle} description={resume.siteDescription}>
-    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+    <div class="page-shell about-page" itemscope itemtype="http://schema.org/Person">
         {resume.telephone === '' ? (
             <meta itemprop="telephone" content="" />
         ) : (
@@ -37,12 +37,5 @@ import SkillsSection from '../components/resume/SkillsSection.astro';
         {resume.sections.interests && <InterestsSection />}
         {resume.sections.links && <LinksSection />}
         {resume.printSocialLinks && <PrintSocialLinksSection />}
-
-        <footer class="page-footer">
-            <p class="footer-line">
-                Made using{' '}
-                <a href="https://github.com/jglovier/resume-template">Resume Template Theme </a>.
-            </p>
-        </footer>
     </div>
 </BaseLayout>

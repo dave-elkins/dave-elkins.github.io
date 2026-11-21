@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import SeriesCard from '../components/SeriesCard.astro';
 import { series } from '../data/series';
 
 const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
@@ -24,7 +25,9 @@ const recent = articles.slice(0, 5);
                 Concept Design, WYSIWID, and the long search for codebases that stay legible.
             </p>
             <p>
-                <a href="/writing/">Browse all writing →</a>
+                <a class="more-link" href="/writing/">
+                    Browse all writing →
+                </a>
             </p>
         </section>
 
@@ -33,10 +36,7 @@ const recent = articles.slice(0, 5);
             <ul class="card-list">
                 {series.map((item) => (
                     <li>
-                        <a class="card" href={`/series/${item.key}/`}>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                        </a>
+                        <SeriesCard series={item} headingLevel={3} />
                     </li>
                 ))}
             </ul>
@@ -47,10 +47,15 @@ const recent = articles.slice(0, 5);
             <ul class="card-list">
                 {recent.map((entry) => (
                     <li>
-                        <ArticleCard entry={entry} compact />
+                        <ArticleCard entry={entry} compact showSeriesImage />
                     </li>
                 ))}
             </ul>
+            <p>
+                <a class="more-link" href="/writing/">
+                    More writing →
+                </a>
+            </p>
         </section>
     </div>
 </BaseLayout>

@@ -1,292 +1,218 @@
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700');
+/* About page styles. The résumé keeps its semantic markup, but its
+   presentation now uses the same design tokens and patterns as the rest of
+   the site (see global.css). */
 
-/* Resume styles ported from _sass/*.scss (plain CSS). Scoped to .wrapper where
-   needed so the shared global.css typography does not override Jekyll styles. */
-
-:root {
-    --resume-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --resume-serif: 'Lora', 'Minion Pro', Palatino, Georgia, serif;
+.about-page {
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.wrapper::before,
-.wrapper::after {
-    content: '';
-    display: table;
-}
-
-.wrapper::after {
-    clear: both;
-}
-
-.wrapper {
-    max-width: 728px;
-    padding: 0 24px;
-    margin: 0 auto;
-    color: #333;
-    font-family: var(--resume-serif);
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.wrapper ::selection {
-    background: rgba(51, 51, 51, 0.8);
-    color: #fff;
+.about-page ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-text);
     text-shadow: none;
-}
-
-.wrapper .group::before,
-.wrapper .group::after {
-    content: '';
-    display: table;
-}
-
-.wrapper .group::after {
-    clear: both;
-}
-
-/* Section headers */
-
-.wrapper .section-header {
-    border-top: 4px solid #c7c7c7;
-    border-bottom: 2px solid #c7c7c7;
-    padding: 0.2rem 0 0.4rem;
-    margin-bottom: 1.5rem;
-}
-
-.wrapper .section-header h2 {
-    font-family: var(--resume-sans);
-    font-weight: 900;
-    font-size: 1.75rem;
-    letter-spacing: -0.05rem;
-    line-height: 1.2;
-    margin: 0;
 }
 
 /* Page header */
 
-.wrapper .page-header {
-    padding: 1.5rem 0;
+.about-page .page-header {
+    margin-bottom: 3rem;
 }
 
-.wrapper .page-header .avatar {
-    width: 95px;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 100px;
-    margin: 0 auto;
+.about-page .header-identity {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.about-page .header-identity__text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-page .page-header .avatar {
     display: block;
+    flex: 0 0 72px;
+    width: 72px;
+    max-width: 100%;
+    margin: 0;
+    border-radius: var(--radius);
 }
 
-.wrapper .page-header .header-name {
-    font-family: var(--resume-sans);
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: -0.15rem;
-    line-height: 1;
-    margin: 1rem 0 0;
+.about-page .header-name {
+    margin: 0 0 0.25rem;
+    text-align: left;
 }
 
-.wrapper .page-header .header-contact-info {
-    font-family: var(--resume-sans);
-    text-align: center;
+.about-page .header-contact-info {
+    color: var(--color-muted);
+    font-family: var(--font-sans);
+    text-align: left;
 }
 
-.wrapper .page-header .header-contact-info p a {
+.about-page .header-contact-info p a {
     color: inherit;
 }
 
-.wrapper .page-header .title-bar {
-    border-top: 4px solid #c7c7c7;
-    border-bottom: 2px solid #c7c7c7;
-    padding: 0.4rem 0;
-    margin-top: 2rem;
+.about-page .title-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1rem;
 }
 
-.wrapper .page-header .title-bar::before,
-.wrapper .page-header .title-bar::after {
-    content: '';
-    display: table;
+.about-page .header-title {
+    color: var(--color-muted);
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
 }
 
-.wrapper .page-header .title-bar::after {
-    clear: both;
-}
-
-.wrapper .page-header .header-title {
-    font-family: var(--resume-sans);
-    font-weight: 300;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    letter-spacing: -0.05rem;
-    text-align: center;
-    margin: 0 0 0.5rem;
-}
-
-@media (min-width: 600px) {
-    .wrapper .page-header .header-title {
-        float: left;
-        margin: 0;
-    }
-}
-
-.wrapper .page-header .executive-summary p:last-child {
+.about-page .page-header .executive-summary p:last-child {
     margin-bottom: 0;
-}
-
-@media (min-width: 600px) {
-    .wrapper .page-header .executive-summary {
-        font-size: 1.125rem;
-    }
 }
 
 /* Icon links */
 
-.wrapper .icon-links {
+.about-page .icon-links {
+    display: flex;
+    gap: 0.75rem;
     margin: 0;
     padding: 0;
     list-style: none;
-    position: relative;
-    top: 4px;
-    text-align: center;
-    border-top: 2px solid #c7c7c7;
-    padding-top: 0.4rem;
 }
 
-@media (min-width: 600px) {
-    .wrapper .icon-links {
-        float: right;
-        border-top: none;
-        padding-top: 0;
-    }
+.about-page .icon-links .icon-link-item {
+    margin: 0;
 }
 
-.wrapper .icon-links .icon-link-item {
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.wrapper .icon-links .icon-link {
+.about-page .icon-link {
     display: inline-block;
 }
 
-.wrapper .icon-links .icon-link:hover .icon path {
-    fill: #333;
-    transition: all 0.2s ease;
+.about-page .icon-link .icon {
+    width: 24px;
+    height: 24px;
 }
 
-.wrapper .icon-links .icon {
-    height: 28px;
+.about-page .icon-link .icon path {
+    fill: var(--color-muted);
+    transition: fill 0.2s ease;
+}
+
+.about-page .icon-link:hover .icon path {
+    fill: var(--color-accent);
 }
 
 /* Contact button */
 
-.wrapper .contact-button {
-    border-radius: 3px;
-    background-color: #efefef;
-    text-decoration: none;
+.about-page .contact-button {
+    display: inline-block;
+    width: auto;
+    padding: 0.65rem 1.25rem;
+    margin: 1.5rem 0 0;
+    border-radius: var(--radius);
+    background: var(--color-accent);
+    color: var(--color-surface);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
     text-align: center;
-    display: block;
-    margin: 1.5rem auto;
-    width: 220px;
-    font-size: 1.375rem;
-    font-family: var(--resume-sans);
-    font-weight: 300;
-    color: #333;
-    line-height: 55px;
-    transition: all 0.2s ease;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
-.wrapper .contact-button:hover {
-    background-color: #333;
-    color: #fff;
+.about-page .contact-button:hover {
+    background: color-mix(in srgb, var(--color-accent) 85%, var(--color-text));
+    color: var(--color-surface);
+    text-decoration: none;
 }
 
-.wrapper .contact-button.not-looking {
-    width: 400px;
+.about-page .contact-button.not-looking {
+    width: auto;
     max-width: 100%;
 }
 
-/* Résumé content */
+/* Section headers and content */
 
-.wrapper .content-section {
+.about-page .content-section {
+    display: grid;
+    gap: 1rem;
     margin: 0 0 3rem;
 }
 
-.wrapper .content-section .resume-item {
-    margin-bottom: 2rem;
+.about-page .content-section .resume-item {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
 }
 
-.wrapper .content-section .resume-item:last-child {
-    margin-bottom: 0;
+.about-page .section-header {
+    padding-bottom: 0.5rem;
+    margin: 0 0 0.25rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
-.wrapper .content-section .resume-item-title {
-    font-family: var(--resume-sans);
-    font-weight: 700;
+.about-page .section-header h2 {
+    margin: 0;
+}
+
+.about-page .content-section .resume-item-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 0.25rem;
+}
+
+.about-page .content-section .resume-item-details {
+    color: var(--color-muted);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.5;
     margin: 0 0 0.75rem;
-    font-size: 1.5rem;
-    letter-spacing: -0.05rem;
-    line-height: 1;
 }
 
-.wrapper .content-section .resume-item-details {
-    font-size: 1.125rem;
-    margin: 0 0 0.75rem;
-    line-height: 1;
+.about-page .content-section .resume-item-details.award-title {
+    font-style: italic;
 }
 
-.wrapper .content-section .resume-item-details.award-title {
-    font-size: 1rem;
-}
-
-.wrapper .content-section .resume-item-title a,
-.wrapper .content-section .resume-item-details a,
-.wrapper .content-section .resume-item-copy a,
-.wrapper .content-section .resume-item-list a {
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid;
-}
-
-.wrapper .content-section .resume-item-title a:hover,
-.wrapper .content-section .resume-item-details a:hover,
-.wrapper .content-section .resume-item-copy a:hover,
-.wrapper .content-section .resume-item-list a:hover {
-    border-bottom: none;
-    color: #9c9c9c;
-}
-
-.wrapper .content-section .resume-item-copy {
+.about-page .content-section .resume-item-copy {
     margin: 0.75rem 0 0;
 }
 
-/* Focus styles for keyboard users */
+.about-page .content-section .resume-item-copy:first-child {
+    margin-top: 0;
+}
 
-.wrapper a:focus-visible,
-.wrapper .contact-button:focus-visible {
-    outline: 2px solid #333;
+.about-page .content-section .resume-item-list {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.about-page .content-section .resume-item-list li {
+    margin-bottom: 0.25rem;
+}
+
+.about-page .content-section .resume-item-list li:last-child {
+    margin-bottom: 0;
+}
+
+.about-page a:focus-visible,
+.about-page .contact-button:focus-visible {
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
-}
-
-/* Footer attribution */
-
-.wrapper .page-footer {
-    border-top: 4px solid #c7c7c7;
-    padding-top: 1.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.wrapper .page-footer .footer-line {
-    margin: 0;
-    font-size: 0.875rem;
-    color: #999;
-}
-
-.wrapper .page-footer .footer-line > a {
-    font-weight: 700;
-    color: #333;
 }
 
 .print-only {
@@ -296,10 +222,7 @@
 @media print {
     .site-header,
     .site-footer,
-    .skip-link {
-        display: none !important;
-    }
-
+    .skip-link,
     .no-print {
         display: none !important;
     }
@@ -310,58 +233,51 @@
 
     body {
         font-size: 12px;
-        line-height: 1rem;
+        line-height: 1.4;
     }
 
-    .wrapper {
+    .about-page {
         max-width: none;
         padding: 0;
     }
 
-    .wrapper .page-header {
-        padding: 1rem 0 0.2rem;
+    .about-page .page-header {
+        padding: 0;
+        margin-bottom: 1rem;
     }
 
-    .wrapper .page-header .header-name {
-        font-family: var(--resume-sans);
-        font-weight: 700;
-        font-size: 2rem;
-        margin: 0 0 0.2rem;
+    .about-page .header-name {
+        font-size: 1.75rem;
     }
 
-    .wrapper .section-header {
-        border-top: 1px solid #c7c7c7;
-        border-bottom: 1px solid #c7c7c7;
+    .about-page .section-header {
+        border-top: 1px solid var(--color-muted);
+        border-bottom: 1px solid var(--color-muted);
         padding: 0.2rem 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .about-page .section-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .about-page .content-section {
+        display: block;
         margin-bottom: 1rem;
     }
 
-    .wrapper .section-header h2 {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-    }
-
-    .wrapper .content-section {
-        margin: 0 0 1rem;
-    }
-
-    .wrapper .content-section .resume-item {
+    .about-page .content-section .resume-item {
+        padding: 0;
         margin-bottom: 1rem;
+        border: 0;
+        background: none;
     }
 
-    .wrapper .content-section .resume-item-title {
-        font-size: 16px;
-        line-height: 0.7em;
+    .about-page .content-section .resume-item-title {
+        font-size: 1rem;
     }
 
-    .wrapper .content-section .resume-item-details {
-        font-size: 12px;
-        margin: 0 0 0.75rem;
-        line-height: 0.7em;
-        font-style: italic;
-    }
-
-    .wrapper .content-section .resume-item-details.award-title {
-        font-size: 11px;
+    .about-page .content-section .resume-item-details {
+        font-size: 0.9rem;
     }
 }

@@ -6,51 +6,35 @@ import { getSeries } from '../data/series';
 interface Props {
     entry: CollectionEntry<'articles'>;
     compact?: boolean;
+    showSeriesImage?: boolean;
 }
 
-const { entry, compact = false } = Astro.props;
+const { entry, compact = false, showSeriesImage = false } = Astro.props;
 const series = getSeries(entry.data.series);
+const withImage = showSeriesImage && Boolean(series?.image);
 ---
 
-<article class:list={['card', { 'card--compact': compact }]}>
+<article class:list={['card', { 'card--compact': compact, 'card--horizontal': withImage }]}>
     <a href={`/writing/${entry.id}/`}>
-        {series && (
-            <p class="eyebrow">
-                {series.shortTitle} · Post {entry.data.order}
-            </p>
+        {withImage && series?.image && (
+            <img
+                class="card-thumb"
+                src={series.image}
+                alt={series.imageAlt ?? series.title}
+                loading="lazy"
+                decoding="async"
+            />
         )}
-        <h2>{entry.data.title}</h2>
-        {entry.data.subtitle && <p class="subtitle">{entry.data.subtitle}</p>}
-        <p>{entry.data.description}</p>
-        <p class="meta">{formatDate(entry.data.date)}</p>
+        <div class="card__body">
+            {series && (
+                <p class="eyebrow">
+                    {series.shortTitle} · Post {entry.data.order}
+                </p>
+            )}
+            <h2>{entry.data.title}</h2>
+            {entry.data.subtitle && <p class="subtitle">{entry.data.subtitle}</p>}
+            <p>{entry.data.description}</p>
+            <p class="meta">{formatDate(entry.data.date)}</p>
+        </div>
     </a>
 </article>
-
-<style>
-    .card a {
-        display: block;
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .card h2 {
-        font-size: 1.35rem;
-        margin-bottom: 0.35rem;
-    }
-
-    .card--compact h2 {
-        font-size: 1.1rem;
-    }
-
-    .subtitle {
-        color: var(--color-muted);
-        font-family: var(--font-serif);
-        font-size: 0.95rem;
-        font-style: italic;
-        margin-bottom: 0.5rem;
-    }
-
-    .meta {
-        margin: 0.5rem 0 0;
-    }
-</style>

@@ -5,24 +5,30 @@ import Markdown from './Markdown.astro';
 ---
 
 <header class="page-header">
-    {resume.avatar === 'true' && (
-        <img src="/images/avatar.png" alt="Dave Elkins" class="avatar no-print" itemprop="image" />
-    )}
-
-    <h1 class="header-name" itemprop="name" set:html={resume.name} />
-
-    {resume.displayHeaderContactInfo === 'true' && (
-        <div class="header-contact-info">
-            <p set:html={resume.headerContactInfo} />
+    <div class="header-identity">
+        {resume.avatar === 'true' && (
+            <img
+                src="/images/avatar.png"
+                alt="Dave Elkins"
+                class="avatar no-print"
+                itemprop="image"
+            />
+        )}
+        <div class="header-identity__text">
+            <h1 class="header-name" itemprop="name" set:html={resume.name} />
+            {resume.displayHeaderContactInfo === 'true' && (
+                <div class="header-contact-info">
+                    <p set:html={resume.headerContactInfo} />
+                </div>
+            )}
+            <div class="title-bar no-print">
+                <h2 class="header-title" itemprop="jobTitle" set:html={resume.title} />
+                <IconLinks />
+            </div>
         </div>
-    )}
-
-    <div class="title-bar no-print">
-        <h2 class="header-title" itemprop="jobTitle" set:html={resume.title} />
-        <IconLinks />
     </div>
 
-    <div class="executive-summary" itemprop="description">
+    <div class="executive-summary lede" itemprop="description">
         <Markdown content={resume.intro} />
     </div>
 

@@ -1,7 +1,7 @@
 ---
 title: 'MVC and the Original Sin'
 description: 'There is a file in your codebase called usercontroller.rb, or views/users/index.html.erb, or models/user.py. You know the one. It started out handling user authentication. Now it…'
-date: 2026-07-23
+date: 2026-09-05
 series: 'legible-by-design-the-long-search'
 order: 4
 originalUrl: 'https://medium.com/@daveelkins/mvc-and-the-original-sin-6b9d5ca1a25a'

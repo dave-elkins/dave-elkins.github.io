@@ -1,7 +1,7 @@
 ---
 title: 'What About Everything Else? DDD, Clean Architecture, CQRS, and the Alternatives'
 description: 'You have read about MVC, OOP, DCI, patterns, hexagons, slices, and behavioral threads. Each got something right. Each left something unfinished.'
-date: 2026-07-29
+date: 2026-11-11
 series: 'legible-by-design-the-long-search'
 order: 10
 tags: []

@@ -3,6 +3,8 @@ export interface SeriesInfo {
     title: string;
     shortTitle: string;
     description: string;
+    image?: string;
+    imageAlt?: string;
 }
 
 export const series: SeriesInfo[] = [
@@ -12,6 +14,8 @@ export const series: SeriesInfo[] = [
         shortTitle: 'The Long Search',
         description:
             'A historical investigation into why codebases resist change, and the decades of ideas that point toward a better answer.',
+        image: '/images/long-search.png',
+        imageAlt: 'Legible by Design: The Long Search series artwork',
     },
     {
         key: 'wysiwid-petstore',
